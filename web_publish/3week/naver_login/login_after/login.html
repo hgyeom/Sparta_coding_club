@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>로그인창</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+
+<body>
+  <!-- 로그인창 만들기(로그인 전) -->
+  <div class="column_fix_wrap">
+    <div id="account" class="sc_login">
+      <h2 class="blind">로그인</h2>
+      <div class="my_cont">
+        <div class="sc_user">
+          <div class="info_area">
+            <a href="#" target="_parent" class="btn_logout">로그아웃</a>
+            <a href="#" target="_parent" class="user_thumb" data-clk="nmy.profile">
+              <img id="MY_PROFILE" src="https://search.pstatic.net/common/?src=https%3A%2F%2Fditto-phinf.pstatic.net%2F20220421_92%2F1650502438781IcChT_PNG%2Fba2da835f8368e5783a8b68cb8555d0d.png&type=o&size=488x470&ttype=input" width="56" height="56" alt="스파르타">
+              <span class="thumb_bd"></span>
+            </a>
+            <div class="user_info"> 
+              <div class="info_box"> 
+                <a href="#" target="_parent" class="link_set" data-clk="nmy.idname">
+                  <span class="nickname MY_NICKNAME">스파르타코딩</span>님
+                </a> 
+                <a href="#" target="_parent" class="link_my" data-clk="nmy.modfy">내정보</a> 
+                <a href="#" target="_parent" class="link_protect" data-clk="nmy.caution">
+                  <span class="blind">로그인 보호 설정</span>
+                </a> 
+                  <div class="email MY_EMAIL">스파르타코딩@naver.com</div> 
+                </div> 
+                <div class="new_box">
+                  <div class="nplus_wrap">
+                    <a href="#" target="_parent" class="link_nplus" data-clk="nmy.plus">
+                      <span class="blind">네이버 플러스 멤버십</span>
+                    </a>
+                  </div> 
+                  <a href="https://mail.naver.com" target="_parent" class="link_new" data-clk="nmy.mailtit">메일<strong class="num MY_MAIL_COUNT">1</strong></a> 
+                  <a href="https://note.naver.com" target="_parent" class="link_new" data-clk="nmy.note">쪽지<strong class="num MY_NOTE_COUNT">0</strong></a> 
+                </div> 
+              </div>
+          </div>
+          <div class="tab_area tab_fold MY_TAB_AREA">
+            <a id="NM_MY_TAB_prev" href="#" role="button" class="btn_prev" style="display: none;" data-clk="nmy.prev"><span class="blind">이전</span></a>
+            <a id="NM_MY_TAB_next" href="#" role="button" class="btn_next" style="" data-clk="nmy.next"><span class="blind">다음</span></a>
+            <div id="NM_MY_TAB" class="tab_scroll">
+              <div class="tab_box_wrap" data-my="" style="width: 1044px; transform: translate(0px, 0px) translateZ(0px);">
+                
+                  <div class="tab_box">
+                  
+                    <a href="#" role="tab" class="tab MY_TAB_NOTI" aria-selected="false" data-service="noti" data-clk="nmy.alert">알림<div class="badge_box"><i class="badge_new">1</i></div></a>
+                  
+                    <a href="#" role="tab" class="tab MY_TAB_FEED" aria-selected="false" data-service="feed" data-clk="nmy.sst">구독<div class="badge_box"></div></a>
+                  
+                    <a href="#" role="tab" class="tab MY_TAB_MAIL" aria-selected="false" data-service="mail" data-clk="nmy.mail">메일<div class="badge_box"><i class="badge_new">1</i></div></a>
+                  
+                    <a href="#" role="tab" class="tab MY_TAB_CAFE" aria-selected="false" data-service="cafe" data-clk="nmy.cafe">카페<div class="badge_box"><i class="badge_new">176</i></div></a>
+                  
+                    <a href="#" role="tab" class="tab MY_TAB_BLOG" aria-selected="false" data-service="blog" data-clk="nmy.blog">블로그<div class="badge_box" style="display: none;"></div></a>
+                  
+                  
+                  </div>
+                
+                  <div class="tab_box">
+                  
+                    <a href="#" role="tab" class="tab MY_TAB_NPAY" aria-selected="false" data-service="npay" data-clk="nmy.npay">페이<div class="badge_box"></div></a>
+                  
+                    <a href="#" role="tab" class="tab MY_TAB_POST" aria-selected="false" data-service="post" data-clk="nmy.post">포스트<div class="badge_box"></div></a>
+                  
+                    <a href="#" role="tab" class="tab MY_TAB_NDRIVE" aria-selected="false" data-service="ndrive" data-clk="nmy.ndrive">MYBOX<div class="badge_box"></div></a>
+                  
+                    <a href="#" role="tab" class="tab MY_TAB_OFFICE" aria-selected="false" data-service="office" data-clk="nmy.office">오피스<div class="badge_box"></div></a>
+                  
+                    <a href="#" role="tab" class="tab MY_TAB_CALENDAR" aria-selected="false" data-service="calendar" data-clk="nmy.calendar">캘린더<div class="badge_box"></div></a>
+                  
+                  
+                  </div>
+                
+                  <div class="tab_box type_under5">
+                  
+                    <a href="#" role="tab" class="tab MY_TAB_HAPPYBEAN" aria-selected="false" data-service="happybean" data-clk="nmy.happybean">해피빈<div class="badge_box"></div></a>
+                  
+                    <a href="#" role="tab" class="tab MY_TAB_KIN" aria-selected="false" data-service="kin" data-clk="nmy.kin">지식iN<div class="badge_box"></div></a>
+                  
+                    <a href="#" role="tab" class="tab MY_TAB_MEMO" aria-selected="false" data-service="memo" data-clk="nmy.memo">메모<div class="badge_box"></div></a>
+                  
+                  
+                    <a href="#" role="tab" class="tab tab_set MY_TAB_SET" aria-selected="false" data-service="set" data-clk="nmy.setting">설정</a>
+                  
+                  </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

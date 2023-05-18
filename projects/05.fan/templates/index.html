@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>초미니홈피 - 팬명록</title>
+
+    <meta property="og:title" content="REOL 팬명록" />
+    <meta property="og:description" content="아티스트에게 응원 한마디" />
+    <meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrL5l7b0V9fO6_FoWSINLZNMTZ6QSUG9mNi9zbcwnVV6-CfTjrPL3VoCHgGIEq8sZpTCc&usqp=CAU" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+            font-family: "Noto Serif KR", serif;
+        }
+        .mypic {
+            width: 100%;
+            height: 300px;
+
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+            ),
+            url("data:image/jpeg;base64,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");
+            background-position: center 30%;
+            background-size: cover;
+
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mypost {
+            width: 95%;
+            max-width: 500px;
+            margin: 20px auto 20px auto;
+
+            box-shadow: 0px 0px 3px 0px black;
+            padding: 20px;
+        }
+
+        .mypost > button {
+            margin-top: 15px;
+        }
+
+        .mycards {
+            width: 95%;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .mycards > .card {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            set_temp();
+            show_comment();
+        });
+        function set_temp() {
+            fetch("http://spartacodingclub.shop/sparta_api/weather/seoul").then((res) => res.json()).then((data) => {
+                let temp = data['temp'];
+                $('#temp').text(temp);
+            });
+        }
+        function save_comment() {
+            let name = $('#name').val();
+            let comment = $('#comment').val();
+
+            let formData = new FormData();
+            formData.append("name_give", name);
+            formData.append("comment_give", comment);
+
+            fetch('/guestbook', {method: "POST",body: formData,}).then((res) => res.json()).then((data) => {
+                alert(data["msg"]);
+                window.location.reload();
+            });
+        }
+        function show_comment() {
+            fetch('/guestbook').then((res) => res.json()).then((data) => {
+                $('#comment-list').empty();
+                let rows = data['result'];
+                rows.forEach((a) => {
+                    let name = a['name'];
+                    let comment = a['comment'];
+                    
+                    let temp_html = `<div class="card">
+                                        <div class="card-body">
+                                        <blockquote class="blockquote mb-0">
+                                            <p>${comment}</p>
+                                            <footer class="blockquote-footer">${name}</footer>
+                                        </blockquote>
+                                        </div>
+                                    </div>`;
+                    $('#comment-list').append(temp_html);
+                });
+                
+            })
+        }
+    </script>
+    </head>
+    <body>
+    <div class="mypic">
+        <h1>REOL 팬명록</h1>
+        <p>현재기온: <span id="temp">36</span>도</p>
+    </div>
+    <div class="mypost">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="name" placeholder="url" />
+            <label for="floatingInput">닉네임</label>
+        </div>
+        <div class="form-floating">
+            <textarea
+            class="form-control"
+            placeholder="Leave a comment here"
+            id="comment"
+            style="height: 100px"
+            ></textarea>
+        <label for="floatingTextarea2">응원댓글</label>
+        </div>
+        <button onclick="save_comment()" type="button" class="btn btn-dark">
+            댓글 남기기
+        </button>
+        </div>
+        <div class="mycards" id="comment-list">
+        <div class="card">
+            <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <p>새로운 앨범 너무 멋져요!</p>
+                <footer class="blockquote-footer">호빵맨</footer>
+            </blockquote>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <p>새로운 앨범 너무 멋져요!</p>
+                <footer class="blockquote-footer">호빵맨</footer>
+            </blockquote>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <p>새로운 앨범 너무 멋져요!</p>
+                <footer class="blockquote-footer">호빵맨</footer>
+            </blockquote>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>

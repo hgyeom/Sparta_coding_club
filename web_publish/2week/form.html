@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <form id="login">
+      <div>아이디 : <input type="input" id="username" /></div>
+      <div>비밀번호 : <input type="password" id="password" /></div>
+      <div>
+        <label><input type="checkbox" id="checkbox"/> 아이디 패스워드 저장</label>
+      </div>
+      <button type="submit">제출</button>
+    </form>
+
+    <script>
+      $('#login').submit(function (event) {
+        event.preventDefault(); //서브밋이 동작하면 새로고침이 되지만 이 코드를 넣음으로써 새로고침을 막는다.
+        var username = $('#username').val();
+        var password = $('#password').val();
+        var isChecked = !!$('#checkbox:checked').val(); //checked는 체크된 값을 가져온다. 앞에 !!를 붙임으로 값을 boolean형태로 받아온다.
+        alert(username + ' / ' + password + ' / ' + isChecked);
+      });
+    </script>
+    
+  </body>
+</html>
