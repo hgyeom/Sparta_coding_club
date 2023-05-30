@@ -41,13 +41,25 @@ function movie_search(search) {
   let search_target = [...card_container.children];
   // console.log(search_target[0]);
   let searching = search_target.filter((value) => {
-    searchList = value
-      .getElementsByClassName("card_title")[0]
-      .textContent.toLowerCase();
-    console.log(searchList);
-    if (searchList.indexOf(search) != "-1") {
+    console.log(
+      value.getElementsByClassName("card_title")[0].textContent.toLowerCase()
+    );
+    // searchList = value
+    //   .getElementsByClassName("card_title")[0]
+    //   .textContent.toLowerCase();
+    // console.log(
+    //   value.getElementsByClassName("card_title")[0].textContent.toLowerCase()
+    // );
+    if (
+      value
+        .getElementsByClassName("card_title")[0]
+        .textContent.toLowerCase()
+        .indexOf(search) != "-1"
+    ) {
       value.style.display = "block";
-      return searchList;
+      return value
+        .getElementsByClassName("card_title")[0]
+        .textContent.toLowerCase();
     } else {
       value.style.display = "none";
     }
@@ -76,18 +88,18 @@ function get_movie_data() {
     .then((response) => response.json())
     //   .then((response) => console.log(response))
     .then((response) => {
-      let rows = response["results"];
+      let movies = response["results"];
       // console.log(rows);
       // card_container의 자식이 있으면 첫번째 자식을 지운다.
       while (card_container.firstChild) {
         card_container.removeChild(card_container.firstChild);
       }
-      rows.forEach((a) => {
-        let title = a["title"];
-        let poster = a["poster_path"];
-        let overview = a["overview"];
-        let rate = a["vote_average"];
-        let id = a["id"];
+      movies.forEach((movie) => {
+        let title = movie["title"];
+        let poster = movie["poster_path"];
+        let overview = movie["overview"];
+        let rate = movie["vote_average"];
+        let id = movie["id"];
         // html요소 생성하기
         let card_div = document.createElement("div");
         card_div.setAttribute("card_id", id);

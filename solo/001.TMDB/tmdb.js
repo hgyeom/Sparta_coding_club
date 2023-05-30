@@ -13,7 +13,7 @@ const search_count = document.querySelector(".search_count");
 
 // ------ 카드 클릭 이벤트 ------
 
-function card_click(id) {
+function card_click() {
   alert("영화 ID: " + this.getAttribute("card_id"));
 }
 
@@ -41,7 +41,7 @@ function movie_search(search) {
   let search_target = [...card_container.children];
   // console.log(search_target[0]);
   let searching = search_target.filter((value) => {
-    searchList = value
+    let searchList = value
       .getElementsByClassName("card_title")[0]
       .textContent.toLowerCase();
     console.log(searchList);
@@ -76,19 +76,17 @@ function get_movie_data() {
     .then((response) => response.json())
     //   .then((response) => console.log(response))
     .then((response) => {
-      let rows = response["results"];
+      let movies = response["results"];
       // console.log(rows);
       // card_container의 자식이 있으면 첫번째 자식을 지운다.
       while (card_container.firstChild) {
         card_container.removeChild(card_container.firstChild);
       }
-      rows.forEach((a) => {
-        let title = a["title"];
-        let poster = a["poster_path"];
-        let overview = a["overview"];
-        let rate = a["vote_average"];
-        let id = a["id"];
+      movies.forEach((movie) => {
+        const { title, poster_path, overview, vote_average, id } = movie;
+
         // html요소 생성하기
+
         let card_div = document.createElement("div");
         card_div.setAttribute("card_id", id);
         card_div.onclick = card_click;
@@ -96,19 +94,19 @@ function get_movie_data() {
         let card_div_img = document.createElement("img");
         card_div_img.setAttribute(
           "src",
-          `https://image.tmdb.org/t/p/original/${poster}`
+          `https://image.tmdb.org/t/p/original/${poster_path}`
         );
         card_div.className = "card_item";
 
         let card_div_title = document.createElement("h3");
         card_div_title.className = "card_title";
-        card_div_title.innerHTML = title;
+        card_div_title.textContent = title;
 
         let card_div_overview = document.createElement("p");
-        card_div_overview.innerHTML = overview;
+        card_div_overview.textContent = overview;
 
         let card_div_rate = document.createElement("p");
-        card_div_rate.innerHTML = "평점: " + rate;
+        card_div_rate.textContent = `평점: ${vote_average}`;
 
         // card_div에 child로 생성된 html 넣기
         card_div.appendChild(card_div_img);
