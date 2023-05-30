@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  height: 100%;
+}
+header {
+  display: flex;
+  /* 가운데 정렬 */
+  justify-content: center;
+  align-items: center;
+  /* header의 정렬을 세로로 */
+  flex-direction: column;
+
+  /* 20% */
+  height: 15vh;
+  width: 100%;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("https://t1.daumcdn.net/movie/34f5dc0d10ea5ec3079c3db30fadd217b2771342");
+  background-position: center;
+  background-size: auto;
+  color: white;
+}
+
+.card_container {
+  margin-top: 30px;
+  display: flex;
+  /* item 가로 정렬 */
+  flex-direction: row;
+  /* item 균등하게 여백 포함 정렬 */
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.card_item {
+  width: 350px;
+  background-color: white;
+  padding: 5px;
+  margin-bottom: 20px;
+  color: black;
+  border-radius: 10px;
+}
+
+.card_item :hover {
+  cursor: pointer;
+}
+
+.card_item img {
+  border-radius: 10px;
+  width: 100%;
+  align-items: center;
+}
+.card_item p {
+  word-wrap: break-word;
+  margin-top: 10px;
+}
+
+.search_box {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.search_btn {
+  margin-bottom: -3px;
+  background-color: white;
+  color: black;
+  border: none;
+  width: 50px;
+  height: 20px;
+}
+
+.search_btn:hover {
+  cursor: pointer;
+  transition: 0.7s;
+}
