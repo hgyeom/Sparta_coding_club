@@ -1,20 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
-  get_movie_data();
+  getMovieData();
 });
 
 // ------ 변수(선택자) 선언부 ------
-const search_btn = document.querySelector(".search_btn");
-const card_container = document.querySelector(".card_container");
-const search_text = document.querySelector(".search_text");
-const card_item = document.querySelector(".card_item");
-const search_count = document.querySelector(".search_count");
+const searchBtn = document.querySelector(".searchBtn");
+const cardContainer = document.querySelector(".cardContainer");
+const searchText = document.querySelector(".searchText");
+const cardItem = document.querySelector(".cardItem");
+const searchcount = document.querySelector(".searchcount");
 // const
 // ------ 여기까지 선언부 ------
 
 // ------ 카드 클릭 이벤트 ------
 
-function card_click() {
-  alert("영화 ID: " + this.getAttribute("card_id"));
+function cardClick() {
+  alert("영화 ID: " + this.getAttribute("cardId"));
 }
 
 // ------ 여기까지 카드 클릭 ------
@@ -22,27 +22,27 @@ function card_click() {
 // ------ 여기부터 검색 ------
 
 // 클릭으로 검색
-search_btn.addEventListener("click", () => {
-  let search = search_text.value.toLowerCase();
-  movie_search(search);
+searchBtn.addEventListener("click", () => {
+  let search = searchText.value.toLowerCase();
+  moiveSearch(search);
 });
 
 // 엔터키로 검색.
-search_text.addEventListener("keydown", (e) => {
+searchText.addEventListener("keydown", (e) => {
   // e는 이벤트 종류
   if (e.keyCode === 13) {
-    let search = search_text.value.toLowerCase();
-    movie_search(search);
+    let search = searchText.value.toLowerCase();
+    moiveSearch(search);
   }
 });
 
-function movie_search(search) {
-  // card_container의 자식
-  let search_target = [...card_container.children];
-  // console.log(search_target[0]);
-  let searching = search_target.filter((value) => {
+function moiveSearch(search) {
+  // cardContainer의 자식
+  let searchTarget = [...cardContainer.children];
+  // console.log(searchTarget[0]);
+  let searching = searchTarget.filter((value) => {
     let searchList = value
-      .getElementsByClassName("card_title")[0]
+      .getElementsByClassName("cardTitle")[0]
       .textContent.toLowerCase();
     console.log(searchList);
     if (searchList.indexOf(search) != "-1") {
@@ -53,7 +53,7 @@ function movie_search(search) {
     }
   });
 
-  search_count.textContent = `검색 결과: ${searching.length}`;
+  searchcount.textContent = `검색 결과: ${searching.length}`;
 }
 
 // ------ 여기까지 검색 ------
@@ -68,7 +68,7 @@ const options = {
   },
 };
 
-function get_movie_data() {
+function getMovieData() {
   fetch(
     "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1",
     options
@@ -78,43 +78,43 @@ function get_movie_data() {
     .then((response) => {
       let movies = response["results"];
       // console.log(rows);
-      // card_container의 자식이 있으면 첫번째 자식을 지운다.
-      while (card_container.firstChild) {
-        card_container.removeChild(card_container.firstChild);
+      // cardContainer의 자식이 있으면 첫번째 자식을 지운다.
+      while (cardContainer.firstChild) {
+        cardContainer.removeChild(cardContainer.firstChild);
       }
       movies.forEach((movie) => {
         const { title, poster_path, overview, vote_average, id } = movie;
 
         // html요소 생성하기
 
-        let card_div = document.createElement("div");
-        card_div.setAttribute("card_id", id);
-        card_div.onclick = card_click;
+        let card = document.createElement("div");
+        card.setAttribute("cardId", id);
+        card.onclick = cardClick;
 
-        let card_div_img = document.createElement("img");
-        card_div_img.setAttribute(
+        let cardPoster = document.createElement("img");
+        cardPoster.setAttribute(
           "src",
           `https://image.tmdb.org/t/p/original/${poster_path}`
         );
-        card_div.className = "card_item";
+        card.className = "cardItem";
 
-        let card_div_title = document.createElement("h3");
-        card_div_title.className = "card_title";
-        card_div_title.textContent = title;
+        let cardTitle = document.createElement("h3");
+        cardTitle.className = "cardTitle";
+        cardTitle.textContent = title;
 
-        let card_div_overview = document.createElement("p");
-        card_div_overview.textContent = overview;
+        let cardOverview = document.createElement("p");
+        cardOverview.textContent = overview;
 
-        let card_div_rate = document.createElement("p");
-        card_div_rate.textContent = `평점: ${vote_average}`;
+        let cardRate = document.createElement("p");
+        cardRate.textContent = `평점: ${vote_average}`;
 
-        // card_div에 child로 생성된 html 넣기
-        card_div.appendChild(card_div_img);
-        card_div.appendChild(card_div_title);
-        card_div.appendChild(card_div_overview);
-        card_div.appendChild(card_div_rate);
+        // card에 child로 생성된 html 넣기
+        card.appendChild(cardPoster);
+        card.appendChild(cardTitle);
+        card.appendChild(cardOverview);
+        card.appendChild(cardRate);
 
-        card_container.appendChild(card_div);
+        cardContainer.appendChild(card);
       });
     })
     .catch((err) => console.error(err));

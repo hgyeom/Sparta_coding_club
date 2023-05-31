@@ -29,7 +29,7 @@ header {
   color: white;
 }
 
-.card_container {
+.cardContainer {
   margin-top: 30px;
   display: flex;
   /* item 가로 정렬 */
@@ -38,7 +38,7 @@ header {
   justify-content: space-around;
   flex-wrap: wrap;
 }
-.card_item {
+.cardItem {
   width: 350px;
   background-color: white;
   padding: 5px;
@@ -47,26 +47,26 @@ header {
   border-radius: 10px;
 }
 
-.card_item :hover {
+.cardItem :hover {
   cursor: pointer;
 }
 
-.card_item img {
+.cardItem img {
   border-radius: 10px;
   width: 100%;
   align-items: center;
 }
-.card_item p {
+.cardItem p {
   word-wrap: break-word;
   margin-top: 10px;
 }
 
-.search_box {
+.searchBox {
   margin-top: 10px;
   margin-bottom: 5px;
 }
 
-.search_btn {
+.searchBtn {
   margin-bottom: -3px;
   background-color: white;
   color: black;
@@ -75,7 +75,7 @@ header {
   height: 20px;
 }
 
-.search_btn:hover {
+.searchBtn:hover {
   cursor: pointer;
   transition: 0.7s;
 }
