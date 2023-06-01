@@ -14,7 +14,7 @@ const searchcount = document.querySelector(".searchcount");
 // ------ 카드 클릭 이벤트 ------
 
 function cardClick() {
-  alert("영화 ID: " + this.getAttribute("cardId"));
+  alert(`영화 ID: ${this.getAttribute("cardId")}`);
 }
 
 // ------ 여기까지 카드 클릭 ------
@@ -74,10 +74,8 @@ function getMovieData() {
     options
   )
     .then((response) => response.json())
-    //   .then((response) => console.log(response))
     .then((response) => {
       let movies = response["results"];
-      // console.log(rows);
       // cardContainer의 자식이 있으면 첫번째 자식을 지운다.
       while (cardContainer.firstChild) {
         cardContainer.removeChild(cardContainer.firstChild);
@@ -86,7 +84,6 @@ function getMovieData() {
         const { title, poster_path, overview, vote_average, id } = movie;
 
         // html요소 생성하기
-
         let card = document.createElement("div");
         card.setAttribute("cardId", id);
         card.onclick = cardClick;
