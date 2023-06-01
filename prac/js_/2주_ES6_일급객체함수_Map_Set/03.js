@@ -20,10 +20,9 @@ function handleEdit(id, editingObj) {
   // db에서 id에 해당하는 객체를 찾아서 내용을 바꿉니다.
   // Object.assign 대신 spread syntax(...)를 사용해야 합니다.
   // 여기에 코드를 작성하세요.
-  db.find((a) => {
-    if (a.id === id) {
-    }
-  });
+  let index = db.findIndex((x) => x.id === id);
+  db[index] = { ...db[index], ...editingObj };
+  // console.log({ ...db[index] });
 }
 
 handleEdit(10, { name: "Paul", age: 35 });
