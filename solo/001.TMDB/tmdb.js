@@ -44,7 +44,6 @@ function moiveSearch(search) {
     let searchList = value
       .getElementsByClassName("cardTitle")[0]
       .textContent.toLowerCase();
-    console.log(searchList);
     if (searchList.indexOf(search) != "-1") {
       value.style.display = "block";
       return searchList;
