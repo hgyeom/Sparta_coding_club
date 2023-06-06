@@ -1,13 +1,22 @@
+// class LinkedList {
+//   constructor() {
+//     this.head = null;
+//   }
+
 class Node {
-  constructor(data) {
-    this.data = data;
+  constructor(value) {
+    this.value = value;
     this.next = null;
   }
 }
 
 class LinkedList {
-  constructor(value) {
-    this.head = new Node(value); // head 에 시작하는 Node 를 연결합니다.
+  constructor() {
+    this.head = null;
+  }
+
+  insertFirst(value) {
+    this.head = new Node(value, this.head); //head에 새로운 node가 들어가고 기존의 해드는 next로 밀려난다.
   }
 
   // LinkedList 가장 끝에 있는 노드에 새로운 노드를 연결합니다.
@@ -66,11 +75,6 @@ class LinkedList {
 
     if (this.head === null) return null;
     return this.head.data;
-    //   let node = this.head;
-    //   while (node.next !== null) {
-    //     node = node.next;
-    //   }
-    //   return node;
   }
 
   push_node(value) {
@@ -101,15 +105,6 @@ class LinkedList {
   }
 
   enqueue(value) {
-    // let curr = this.head;
-    // while (curr.next !== null) {
-    //   // curr의 다음이 끝에 갈 때까지 이동합니다.
-    //   curr = curr.next;
-    // }
-    // this.tail = curr;
-    // this.tail = new Node(value);
-    // return this.tail;
-
     let newNode = new Node(value);
     if (this.head === null) {
       this.head = newNode;
@@ -120,6 +115,7 @@ class LinkedList {
       return this;
     }
   }
+
   dequeue() {
     let dequeueNode = this.head;
     if (dequeueNode === null) return null;
@@ -128,22 +124,23 @@ class LinkedList {
   }
 }
 
-let a = new LinkedList("a");
+let a = new LinkedList();
+a.insertFirst("a");
 a.append("b");
 a.append("c");
 
-a.add_node(0, "0");
+// a.add_node(0, "0");
 
 // console.log(a.peek_node());
-a.push_node("push");
+// a.push_node("push");
 // console.log(a.get_node(0));
 // console.log(a.pop());
 // console.log(a.peek());
 
 console.log(a);
-console.log("----------------------------");
-console.log(a.dequeue());
-console.log("----------------------------");
-console.log(a);
-console.log("----------------------------");
-console.log(a.enqueue("tail"));
+// console.log("----------------------------");
+// console.log(a.dequeue());
+// console.log("----------------------------");
+// console.log(a);
+// console.log("----------------------------");
+// console.log(a.enqueue("tail"));
