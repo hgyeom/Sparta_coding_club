@@ -1,0 +1,14 @@
+.app-style {
+  display: flex;
+  padding: 100px;
+  gap: 10px;
+}
+.component-style {
+  display: flex;
+  border: solid 1px green;
+  border-radius: 5px;
+  width: 100px;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+}
