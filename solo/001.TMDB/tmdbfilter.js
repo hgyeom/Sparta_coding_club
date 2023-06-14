@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  get_movie_data();
+  createMovieList();
 });
 
 // ------ 변수(선택자) 선언부 ------
@@ -36,7 +36,7 @@ search_text.addEventListener("keydown", (e) => {
   }
 });
 
-function movie_search(search) {
+let movie_search = (search) => {
   // card_container의 자식
   let search_target = [...card_container.children];
   // console.log(search_target[0]);
@@ -66,7 +66,7 @@ function movie_search(search) {
   });
 
   search_count.textContent = `검색 결과: ${searching.length}`;
-}
+};
 
 // ------ 여기까지 검색 ------
 
@@ -80,7 +80,7 @@ const options = {
   },
 };
 
-function get_movie_data() {
+let get_movie_data = () => {
   fetch(
     "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1",
     options
@@ -88,50 +88,52 @@ function get_movie_data() {
     .then((response) => response.json())
     //   .then((response) => console.log(response))
     .then((response) => {
-      let movies = response["results"];
-      // console.log(rows);
-      // card_container의 자식이 있으면 첫번째 자식을 지운다.
-      while (card_container.firstChild) {
-        card_container.removeChild(card_container.firstChild);
-      }
-      movies.forEach((movie) => {
-        let title = movie["title"];
-        let poster = movie["poster_path"];
-        let overview = movie["overview"];
-        let rate = movie["vote_average"];
-        let id = movie["id"];
-        // html요소 생성하기
-        let card_div = document.createElement("div");
-        card_div.setAttribute("card_id", id);
-        card_div.onclick = card_click;
-
-        let card_div_img = document.createElement("img");
-        card_div_img.setAttribute(
-          "src",
-          `https://image.tmdb.org/t/p/original/${poster}`
-        );
-        card_div.className = "card_item";
-
-        let card_div_title = document.createElement("h3");
-        card_div_title.className = "card_title";
-        card_div_title.innerHTML = title;
-
-        let card_div_overview = document.createElement("p");
-        card_div_overview.innerHTML = overview;
-
-        let card_div_rate = document.createElement("p");
-        card_div_rate.innerHTML = "평점: " + rate;
-
-        // card_div에 child로 생성된 html 넣기
-        card_div.appendChild(card_div_img);
-        card_div.appendChild(card_div_title);
-        card_div.appendChild(card_div_overview);
-        card_div.appendChild(card_div_rate);
-
-        card_container.appendChild(card_div);
-      });
+      return response["results"];
     })
     .catch((err) => console.error(err));
-}
+};
+
+let createMovieList = function get_movie_data() {
+  // console.log(rows);
+  // card_container의 자식이 있으면 첫번째 자식을 지운다.
+  let movies = response["results"];
+  card_container.firstChild.innerHTML = "";
+  movies.forEach((movie) => {
+    let title = movie["title"];
+    let poster = movie["poster_path"];
+    let overview = movie["overview"];
+    let rate = movie["vote_average"];
+    let id = movie["id"];
+    // html요소 생성하기
+    let card_div = document.createElement("div");
+    card_div.setAttribute("card_id", id);
+    card_div.onclick = card_click;
+
+    let card_div_img = document.createElement("img");
+    card_div_img.setAttribute(
+      "src",
+      `https://image.tmdb.org/t/p/original/${poster}`
+    );
+    card_div.className = "card_item";
+
+    let card_div_title = document.createElement("h3");
+    card_div_title.className = "card_title";
+    card_div_title.innerHTML = title;
+
+    let card_div_overview = document.createElement("p");
+    card_div_overview.innerHTML = overview;
+
+    let card_div_rate = document.createElement("p");
+    card_div_rate.innerHTML = "평점: " + rate;
+
+    // card_div에 child로 생성된 html 넣기
+    card_div.appendChild(card_div_img);
+    card_div.appendChild(card_div_title);
+    card_div.appendChild(card_div_overview);
+    card_div.appendChild(card_div_rate);
+
+    card_container.appendChild(card_div);
+  });
+};
 
 // ------ 여기까지 tmdb api ------
