@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>영화정보</title>
+    <link rel="stylesheet" href="css/movie.css" />
+    <script type="module" src="script/api.js"></script>
+    <script type="module" src="script/movie.js"></script>
+    
+  </head>
+
+  <body>
+    <header>
+      <div class="detail-tab">MOVIE INFORMATION</div>
+      <h1 style="cursor: pointer;">
+        <a href="main.html">Bougie Night</a>
+      </h1>
+      <a href="main.html"><img src="assets/home.png" /></a>
+    </header>
+    <div class="content-container">
+      <div id="movie-backdrop"></div>
+      <div class="movie-flex">
+        <div id="movie-poster"></div>
+        <div class="movie-details">
+          <h1 class="movie-title" id="movie-title"></h1>
+          <h3>장르</h3>
+          <p id="movie-genres"></p>
+          <h3>평점</h3>
+          <p id="vote-average" class="movie-rating"></p>
+          <h3>감독</h3>
+          <p id="movie-director"></p>
+          <h3 class="actor">배우</h3>
+          <div id="movie-cast" class="cast-container"></div>
+        </div>
+      </div>
+      <h3 class="movieCon">줄거리</h3>
+      <p id="movie-overview" class="movie-overview"></p>
+      <iframe class="trailer" width="800" height="450"></iframe>
+
+      <!-- 김우리 -->
+          <div class="modal" style="display: none;">
+            <div class="modalBody">
+                <h1>후기 삭제</h1>
+                <input type="text" class="modalPsw"
+                placeholder="등록한 비밀번호를 입력해주세요.">
+                <button >삭제</button>
+            </div>
+        </div>
+        <main class="main__container">
+            <div class="editor__container">
+              <h2>후기를 작성해 주세요</h2>
+                <form action="#" class="editor__form" id="editor-form">
+                    <input type="text"
+                    class="editor__title-input"
+                    id="editor-title-input"
+                    placeholder="작성자"
+                    />
+                    <input type="text"
+                    class="editor__psw-input"
+                    id="editor-psw-input"
+                    placeholder="pw"
+                    />
+                    <input type="text"
+                    class="editor__content-input"
+                    id="editor-content-input"
+                    placeholder="내용"
+                    />
+                    <button class="editor__btn" id="editor-submit-btn">작성 완료</button>
+                </form>
+            </div>
+            <div class="board__container">
+                <table class="board">
+                    <thead class="board__table-head">
+                    <tr class="board__titles">
+                        <th class="board__column">번호</th>
+                        <th class="board__column">후기</th>
+                        <th class="board__column">작성자</th>
+                        <th class="board__column">작성일</th>
+                        <th class="board__column">조회</th>
+                    </tr>
+                    </thead>
+                    <tbody class="board__contents" id="board-body"></tbody>
+                </table>
+                <div class="board__index-container" id="index-container"></div>
+            </div>
+            <div class="contents__container"></div>
+    </div>
+  </body>
+</html>

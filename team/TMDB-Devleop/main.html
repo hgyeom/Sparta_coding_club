@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#" />
+
+    <script type="module" src="script/main.js" defer></script>
+    <script type="module" src="script/tab.js" defer></script>
+    <script type="module" src="script/boxoffice.js" defer></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>TMDB부기나이트9조</title>
+  </head>
+
+  <body>
+    <header>
+      <ul class="movie-tab">
+        <li class="movie-list-tab">NOW</li>
+        <li class="daily-boxoffice-tab off">POPULAR</li>
+      </ul>
+      <h1>Bougie Night</h1>
+      <a href="main.html"><img src="assets/home.png" /></a>
+    </header>
+
+    <div class="form">
+      <div class="form-content">
+        <span>영화 검색 </span>
+        <input id="search-input" placeholder="영화 제목을 검색해 보세요" />
+        <button type="submit" id="search-btn">검색</button>
+        <button id="name">이름순</button>
+        <button id="vote">평점순</button>
+      </div>
+    </div>
+    <!-- list -->
+    <section class="card-list">
+      <div class="movie-list-container">
+        <!-- <div></div> movie -->
+      </div>
+    </section>
+    <section class="daily-boxoffice">
+      <div class="daily-boxoffice-container off">
+        <!-- <div class="daily-movie">
+          <img src="assets/20226411.jpg" class="card-img" />
+          <h3>제목</h3>
+          <p>설명</p>
+          <p>평점</p>
+        </div> -->
+      </div>
+    </section>
+
+    <footer></footer>
+  </body>
+</html>
