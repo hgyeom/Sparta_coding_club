@@ -1,0 +1,85 @@
+/* layout */
+.layout {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  min-width: 800px;
+}
+
+/* header */
+.app-heder {
+  display: flex;
+}
+
+/* form */
+form {
+  height: 50px;
+  display: flex;
+  margin-bottom: 10px;
+  background-color: black;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  border-radius: 5px;
+}
+
+form button {
+  height: 35px;
+  width: 100px;
+  margin: auto;
+  border: 0px;
+  border-radius: 10px;
+}
+
+form button:hover {
+  cursor: pointer;
+}
+
+.form-input {
+  margin-left: 10px;
+}
+
+.add-input {
+  width: 300px;
+  height: 30px;
+  /* margin은 위, 오른쪽, 아래, 왼쪽 순서 */
+  margin: 0px 10px 0px 10px;
+  border-radius: 10px;
+  border: 3px;
+}
+
+/* body */
+/* .todo-container {
+  background-color: grey;
+} */
+
+.todo-wrapper {
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  min-height: 300px;
+  margin-bottom: 30px;
+  /* border: 1px solid black; */
+}
+
+/* card */
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  min-height: 300px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  word-break: break-all;
+  margin-top: 5px;
+}
+
+.card-button {
+  margin-bottom: 10px;
+}
+.card-button button {
+  margin: 0px 3px 0px 3px;
+}
