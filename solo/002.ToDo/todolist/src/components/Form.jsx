@@ -17,6 +17,17 @@ const Form = ({ todoList, setTodoList }) => {
   // set todolist
   const onAddHandler = (e) => {
     e.preventDefault();
+    if (document.querySelector(".title-input").getAttribute("value") === "") {
+      alert("제목을 입력해 주세요.");
+      document.querySelector(".title-input").focus();
+      return;
+    }
+    if (document.querySelector(".body-input").getAttribute("value") === "") {
+      alert("내용을 입력해 주세요.");
+      document.querySelector(".body-input").focus();
+      return;
+    }
+
     const todo = {
       id: todoList.length + 1,
       title,
@@ -32,14 +43,14 @@ const Form = ({ todoList, setTodoList }) => {
         <label>제목</label>
         <input
           type="text"
-          className="add-input"
+          className="title-input"
           value={title}
           onChange={onTitleChangeHandler}
         />
         <label>내용</label>
         <input
           type="text"
-          className="add-input"
+          className="body-input"
           value={body}
           onChange={onBodyChangeHandler}
         />
