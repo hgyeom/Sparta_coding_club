@@ -1,6 +1,6 @@
 import Card from "components/Card";
 
-const Todo = ({ todoList, setTodoList, onRemoveHandler, onChangeHandler }) => {
+const Todo = ({ todoList, setTodoList }) => {
   return (
     <div className="todo-container">
       <h1>Working</h1>
@@ -10,8 +10,8 @@ const Todo = ({ todoList, setTodoList, onRemoveHandler, onChangeHandler }) => {
             <Card
               key={todo.id}
               todo={todo}
-              onRemoveHandler={onRemoveHandler}
-              onChangeHandler={onChangeHandler}
+              setTodoList={setTodoList}
+              todoList={todoList}
             />
           ) : null;
         })}
@@ -23,8 +23,8 @@ const Todo = ({ todoList, setTodoList, onRemoveHandler, onChangeHandler }) => {
             <Card
               key={todo.id}
               todo={todo}
-              onRemoveHandler={onRemoveHandler}
-              onChangeHandler={onChangeHandler}
+              setTodoList={setTodoList}
+              todoList={todoList}
             />
           ) : null;
         })}

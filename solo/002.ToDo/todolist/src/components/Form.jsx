@@ -15,7 +15,7 @@ const Form = ({ todoList, setTodoList }) => {
   };
 
   // set todolist
-  const onAddHandler = (e) => {
+  const onAddClickHandler = (e) => {
     e.preventDefault();
     if (document.querySelector(".title-input").getAttribute("value") === "") {
       alert("제목을 입력해 주세요.");
@@ -35,6 +35,8 @@ const Form = ({ todoList, setTodoList }) => {
       isDone: false,
     };
     setTodoList([...todoList, todo]);
+    setTitle("");
+    setBody("");
   };
 
   return (
@@ -55,7 +57,7 @@ const Form = ({ todoList, setTodoList }) => {
           onChange={onBodyChangeHandler}
         />
       </div>
-      <button onClick={onAddHandler}>추가하기</button>
+      <button onClick={onAddClickHandler}>추가하기</button>
     </form>
   );
 };
