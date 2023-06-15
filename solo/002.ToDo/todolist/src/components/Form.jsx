@@ -1,9 +1,11 @@
 import { useState } from "react";
 
+let newTodoId = 4;
+
 const Form = ({ todoList, setTodoList }) => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
-
+  console.log(todoList);
   // title 변경
   const onTitleChangeHandler = (e) => {
     setTitle(e.target.value);
@@ -29,11 +31,13 @@ const Form = ({ todoList, setTodoList }) => {
     }
 
     const todo = {
-      id: todoList.length + 1,
+      id: newTodoId,
       title,
       body,
       isDone: false,
     };
+
+    newTodoId++;
     setTodoList([...todoList, todo]);
     setTitle("");
     setBody("");

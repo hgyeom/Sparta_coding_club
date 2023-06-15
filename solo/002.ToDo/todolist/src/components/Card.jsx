@@ -4,7 +4,7 @@ const Card = ({ todo, setTodoList, todoList }) => {
     setTodoList(filterdTodo);
   };
 
-  const onCompleteClickHandler = (id) => {
+  const onDoneClickHandler = (id) => {
     const changeTodo = todoList.map((todo) => {
       if (todo.id === id) {
         todo.isDone = !todo.isDone;
@@ -22,7 +22,7 @@ const Card = ({ todo, setTodoList, todoList }) => {
       <p>{todo.body}</p>
       <div className="card-button">
         <button onClick={() => onRemoveClickHandler(todo.id)}>삭제</button>
-        <button onClick={() => onCompleteClickHandler(todo.id)}>
+        <button onClick={() => onDoneClickHandler(todo.id)}>
           {todo.isDone ? "취소" : "완료"}
         </button>
       </div>
