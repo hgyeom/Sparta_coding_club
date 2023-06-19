@@ -7,9 +7,10 @@ function App() {
     <>
       <div>number = {number}</div>
       <button
-        onClick={() => {
-          setNumber((number) => number + 1);
-        }}
+        onClick={setNumber(number + 1)}
+        // onClick={() => {
+        //   setNumber((number) => number + 1);
+        // }}
       >
         UP
       </button>
