@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import GrandFather from "./useContext/GrandFather";
 
 function App() {
-  return <div />;
+  return <GrandFather />;
 }
 
 export default App;
