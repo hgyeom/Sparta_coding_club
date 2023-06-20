@@ -1,9 +1,8 @@
 import "./App.css";
-import { useState, useEffect } from "react";
-import GrandFather from "./useContext/GrandFather";
+import React, { useState, useEffect } from "react";
 
 function App() {
-  return <div />;
+  return <></>;
 }
 
 export default App;
