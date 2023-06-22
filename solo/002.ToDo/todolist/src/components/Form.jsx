@@ -1,23 +1,25 @@
+import uuid from "react-uuid";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addTodo } from "redux/modules/todo";
 
-let newTodoId = 4;
+const Form = () => {
+  const dispatch = useDispatch();
 
-const Form = ({ todoList, setTodoList }) => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
-  console.log(todoList);
+
   // title 변경
-  const onTitleChangeHandler = (e) => {
+  const titleChangeHandler = (e) => {
     setTitle(e.target.value);
   };
 
   // body 변경
-  const onBodyChangeHandler = (e) => {
+  const bodyChangeHandler = (e) => {
     setBody(e.target.value);
   };
 
-  // set todolist
-  const onAddClickHandler = (e) => {
+  const addButtonClickHandler = (e) => {
     e.preventDefault();
     if (document.querySelector(".title-input").getAttribute("value") === "") {
       alert("제목을 입력해 주세요.");
@@ -31,14 +33,13 @@ const Form = ({ todoList, setTodoList }) => {
     }
 
     const todo = {
-      id: newTodoId,
+      id: uuid(),
       title,
       body,
       isDone: false,
     };
 
-    newTodoId++;
-    setTodoList([...todoList, todo]);
+    dispatch(addTodo(todo));
     setTitle("");
     setBody("");
   };
@@ -51,17 +52,17 @@ const Form = ({ todoList, setTodoList }) => {
           type="text"
           className="title-input"
           value={title}
-          onChange={onTitleChangeHandler}
+          onChange={titleChangeHandler}
         />
         <label>내용</label>
         <input
           type="text"
           className="body-input"
           value={body}
-          onChange={onBodyChangeHandler}
+          onChange={bodyChangeHandler}
         />
       </div>
-      <button onClick={onAddClickHandler}>추가하기</button>
+      <button onClick={addButtonClickHandler}>추가하기</button>
     </form>
   );
 };
