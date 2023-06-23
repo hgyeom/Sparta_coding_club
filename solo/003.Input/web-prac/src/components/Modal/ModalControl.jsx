@@ -1,4 +1,4 @@
-import { styled, css } from "styled-components";
+import { styled } from "styled-components";
 import { useEffect, useRef } from "react";
 const ModalContainer = styled.div`
   /* 모달창 크기 */
@@ -28,28 +28,30 @@ const ModalCloseButton = styled.button`
   right: 10px;
 `;
 
-function ModalCotroll({ setModalOpen, number }) {
+function ModalCotroll({ setModalOpen, number, closeModal }) {
   const modalRef = useRef();
 
   useEffect(() => {
-    const handleOutsideClick = (event) => {
-      if (modalRef.current && !modalRef.current.contains(event.target)) {
-        setModalOpen(false);
+    // 외부영역 클릭시 닫기
+    const outsideClickHandler = (event) => {
+      if (modalRef.current && modalRef.current.contains(event.target)) {
+        console.log(modalRef);
+        return;
       }
+      // console.log(modalRef.current.contains(event.target));
+      setModalOpen(false);
     };
 
+    // 모달 번호가 two일때만 실행. document 전체에 mousedown 이벤트를 준다.
     if (number === "two") {
-      document.addEventListener("mousedown", handleOutsideClick);
+      document.addEventListener("mousedown", outsideClickHandler);
     }
 
+    // oustsideClickHandler가 종료되면 mousedown 이벤트를 삭제한다.
     return () => {
-      document.removeEventListener("mousedown", handleOutsideClick);
+      document.removeEventListener("mousedown", outsideClickHandler);
     };
-  }, [number, setModalOpen]);
-
-  const closeModal = () => {
-    setModalOpen(false);
-  };
+  }, [number, setModalOpen]); // number나 setModalOpen이 변경될 때 실행한다.
 
   return number === "one" ? (
     <ModalContainer ref={modalRef}>

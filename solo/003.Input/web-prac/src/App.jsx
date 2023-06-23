@@ -1,4 +1,3 @@
-import "./App.css";
 import Buttons from "./components/button/Buttons";
 import Input from "./components/Input";
 import Modal from "./components/Modal/Modal";

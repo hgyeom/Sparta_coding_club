@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ModalCotroll from "./ModalCotroll";
+import ModalControl from "./ModalControl";
 
 function Modal() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -7,9 +7,12 @@ function Modal() {
 
   // 모달창 노출
   const showModal = (e) => {
-    // console.log(e.target.value);
     setNumber(e.target.value);
-    setModalOpen(true, e.target);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
   };
 
   return (
@@ -18,15 +21,23 @@ function Modal() {
       <button onClick={showModal} value="one">
         open modal
       </button>
-      {modalOpen && (
-        <ModalCotroll setModalOpen={setModalOpen} number={number} />
+      {modalOpen && number === "one" && (
+        <ModalControl
+          setModalOpen={setModalOpen}
+          number={number}
+          closeModal={closeModal}
+        />
       )}
 
       <button onClick={showModal} value="two">
         open modal
       </button>
-      {modalOpen && (
-        <ModalCotroll setModalOpen={setModalOpen} number={number} />
+      {modalOpen && number === "two" && (
+        <ModalControl
+          setModalOpen={setModalOpen}
+          number={number}
+          closeModal={closeModal}
+        />
       )}
     </div>
   );
