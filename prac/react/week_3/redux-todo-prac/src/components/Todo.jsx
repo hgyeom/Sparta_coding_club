@@ -45,7 +45,7 @@ function Todo() {
                   삭제
                 </button>
               </div>
-              <Link to={`${todo.todoId}`}>상세페이지</Link>
+              <Link to={`/detail/${todo.todoId}`}>상세페이지</Link>
             </div>
           );
         })}
@@ -77,7 +77,7 @@ function Todo() {
                   삭제
                 </button>
               </div>
-              <Link to={`${todo.todoId}`}>상세페이지</Link>
+              <Link to={`/detail/${todo.todoId}`}>상세페이지</Link>
             </div>
           );
         })}
