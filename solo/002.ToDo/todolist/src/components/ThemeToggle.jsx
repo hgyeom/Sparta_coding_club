@@ -10,12 +10,17 @@ const ThemeToggle = () => {
     dispatch(changeTheme(theme));
   };
   return (
-    <StThemeToggleContainer onClick={onClickThemeToggle}>
-      다크모드
-    </StThemeToggleContainer>
+    <div>
+      <StThemeToggleBtn onClick={onClickThemeToggle}>
+        {theme === "light" ? "DarkMode" : "LightMode"}
+      </StThemeToggleBtn>
+    </div>
   );
 };
 
 export default ThemeToggle;
 
-const StThemeToggleContainer = styled.div``;
+const StThemeToggleBtn = styled.button`
+  border: 1px solid grey;
+  cursor: pointer;
+`;
