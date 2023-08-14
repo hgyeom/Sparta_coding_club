@@ -1,0 +1,12 @@
+Merge branch 'develop' of github.com:HojinLim/team_one
+
+# Conflicts:
+#	README.md
+#	src/App.tsx
+#	src/components/main/Main.tsx
+#	src/components/mypage/MyProfile.tsx
+#	src/components/posts/Post.tsx
+#	src/components/user/signUp/SignUp.tsx
+#	src/pages/Home.tsx
+#	src/pages/Mypage.tsx
+#	src/pages/detail/Detail.tsx

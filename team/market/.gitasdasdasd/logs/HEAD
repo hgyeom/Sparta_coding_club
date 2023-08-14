@@ -1,0 +1,49 @@
+0000000000000000000000000000000000000000 ff4bea6423022a62527cfe76cd80bca3729187ac hgyeom <rrune3@naver.com> 1691456712 +0900	clone: from github.com:HojinLim/team_one.git
+ff4bea6423022a62527cfe76cd80bca3729187ac ff4bea6423022a62527cfe76cd80bca3729187ac hgyeom <rrune3@naver.com> 1691457180 +0900	checkout: moving from dev to Chore/#1
+ff4bea6423022a62527cfe76cd80bca3729187ac f1b038f612e40afe768cb31fa5ad0100a3c8cc9d hgyeom <rrune3@naver.com> 1691457199 +0900	commit: Chore/초기 설정 (#1)
+f1b038f612e40afe768cb31fa5ad0100a3c8cc9d ad98ed338b7fef0da283c59bb014fb61b75b40ae hgyeom <rrune3@naver.com> 1691459282 +0900	commit: Chore/ 초기 설정(#1)
+ad98ed338b7fef0da283c59bb014fb61b75b40ae ad98ed338b7fef0da283c59bb014fb61b75b40ae hgyeom <rrune3@naver.com> 1691459976 +0900	checkout: moving from Chore/#1 to ddddd
+ad98ed338b7fef0da283c59bb014fb61b75b40ae 0bc3e5e160eab98b48f97cfd367d88cf25b60e2a hgyeom <rrune3@naver.com> 1691459985 +0900	pull origin dev: Merge made by the 'ort' strategy.
+0bc3e5e160eab98b48f97cfd367d88cf25b60e2a 9939a397a90589eefc38366d81c0d90b2bfaf2cf hgyeom <rrune3@naver.com> 1691462133 +0900	commit: Chore/초기설정 (#1)
+9939a397a90589eefc38366d81c0d90b2bfaf2cf 9939a397a90589eefc38366d81c0d90b2bfaf2cf hgyeom <rrune3@naver.com> 1691462157 +0900	checkout: moving from ddddd to develop
+9939a397a90589eefc38366d81c0d90b2bfaf2cf d396a61093d725d65c8fbb2d4e3ed10aa530b133 hgyeom <rrune3@naver.com> 1691466280 +0900	pull origin develop: Fast-forward
+d396a61093d725d65c8fbb2d4e3ed10aa530b133 d396a61093d725d65c8fbb2d4e3ed10aa530b133 hgyeom <rrune3@naver.com> 1691479581 +0900	checkout: moving from develop to Feat/#7
+d396a61093d725d65c8fbb2d4e3ed10aa530b133 2f2fa243aba98c12cd72c627014624e88c8ed75d hgyeom <rrune3@naver.com> 1691479944 +0900	commit: 댓글 읽기 구현]
+2f2fa243aba98c12cd72c627014624e88c8ed75d 2f2fa243aba98c12cd72c627014624e88c8ed75d hgyeom <rrune3@naver.com> 1691480341 +0900	reset: moving to HEAD
+2f2fa243aba98c12cd72c627014624e88c8ed75d ed38153b8cc201ae01af3bc20d04b7bc7c2487ba hgyeom <rrune3@naver.com> 1691480449 +0900	commit: gitignore 수정
+ed38153b8cc201ae01af3bc20d04b7bc7c2487ba 49183ca3690df8dbc81a3cfe011e19de9578d2bf hgyeom <rrune3@naver.com> 1691480676 +0900	commit (merge): 최신화
+49183ca3690df8dbc81a3cfe011e19de9578d2bf b3b957c8f650281152c38539c60f28d49e1d7482 hgyeom <rrune3@naver.com> 1691551522 +0900	commit: Feat/댓글 기능(#7)
+b3b957c8f650281152c38539c60f28d49e1d7482 e3d3ac71b84a81bf0be77bd3bd736efd889a6027 hgyeom <rrune3@naver.com> 1691557153 +0900	pull origin develop: Fast-forward
+e3d3ac71b84a81bf0be77bd3bd736efd889a6027 51f26613cc9e3afff270e874bac6d90faab3f46b hgyeom <rrune3@naver.com> 1691571132 +0900	commit: Feat/댓글 기능(#7)
+51f26613cc9e3afff270e874bac6d90faab3f46b 44a73ffed563cde8b123f4c4f11ccec0b6c0c30f hgyeom <rrune3@naver.com> 1691571246 +0900	commit (merge): Feat/댓글 기능(#7)
+44a73ffed563cde8b123f4c4f11ccec0b6c0c30f fb0e69e77dcb64db6c33cdff31ea30f9796b9533 hgyeom <rrune3@naver.com> 1691627482 +0900	commit: Feat/before pull (#7)
+fb0e69e77dcb64db6c33cdff31ea30f9796b9533 9ca837034be76918a5b3094b56f5b9743df8555d hgyeom <rrune3@naver.com> 1691627631 +0900	commit (merge): Feat/pull (#7)
+9ca837034be76918a5b3094b56f5b9743df8555d 71acc1b35e2cf8f587dad0f4608404920a1a4490 hgyeom <rrune3@naver.com> 1691635777 +0900	commit: Feat/before pull (#7)
+71acc1b35e2cf8f587dad0f4608404920a1a4490 1b4f19f59dd2beb30ad803c5f6b2528ea8a9c768 hgyeom <rrune3@naver.com> 1691635789 +0900	pull origin develop: Merge made by the 'ort' strategy.
+1b4f19f59dd2beb30ad803c5f6b2528ea8a9c768 b84397c75288c5153066a31ed9e1d9cfb0e26c1a hgyeom <rrune3@naver.com> 1691636015 +0900	commit: Feat/댓글 기능 (#7)
+b84397c75288c5153066a31ed9e1d9cfb0e26c1a 0ba601c76519188203b454e3ec67d6cb1961cbb5 hgyeom <rrune3@naver.com> 1691658918 +0900	commit: Feat/댓글기능 (#7)
+0ba601c76519188203b454e3ec67d6cb1961cbb5 db574af15d69ad4dc96d605c86b440ce2b0545df hgyeom <rrune3@naver.com> 1691658953 +0900	pull origin develop: Merge made by the 'ort' strategy.
+db574af15d69ad4dc96d605c86b440ce2b0545df e85d2d970c6972d89a6d1fdc371df7a4fe045c11 hgyeom <rrune3@naver.com> 1691663484 +0900	pull origin develop: Fast-forward
+e85d2d970c6972d89a6d1fdc371df7a4fe045c11 26ec7ea712e886c511d6e372a2145ffa85be4e93 hgyeom <rrune3@naver.com> 1691664080 +0900	pull origin develop: Fast-forward
+26ec7ea712e886c511d6e372a2145ffa85be4e93 352b10692ce88443dcb31e08d9feeb0e02a65225 hgyeom <rrune3@naver.com> 1691719710 +0900	commit: Feat/댓글기능 (#7)
+352b10692ce88443dcb31e08d9feeb0e02a65225 8a0f355253c454ddc404071dfb6c886f3fa719e5 hgyeom <rrune3@naver.com> 1691723564 +0900	commit (merge): Feat/댓글기능 (#7)
+8a0f355253c454ddc404071dfb6c886f3fa719e5 3e53693699b095ea29c70e9fe95dec875a60230b hgyeom <rrune3@naver.com> 1691723691 +0900	commit: Feat/댓글기능 (#7)
+3e53693699b095ea29c70e9fe95dec875a60230b 0c441ccfe07f7e91b47e55a97b835359a760bcc3 hgyeom <rrune3@naver.com> 1691731880 +0900	pull origin develop: Fast-forward
+0c441ccfe07f7e91b47e55a97b835359a760bcc3 0c441ccfe07f7e91b47e55a97b835359a760bcc3 hgyeom <rrune3@naver.com> 1691731919 +0900	checkout: moving from Feat/#7 to Feat/#38
+0c441ccfe07f7e91b47e55a97b835359a760bcc3 e428ced04e2a5ed51069e472273059de7732763c hgyeom <rrune3@naver.com> 1691734515 +0900	commit: Feat/찜 기능 (#38)
+e428ced04e2a5ed51069e472273059de7732763c 880e12e3f31a8ca26d8e1023ccca70436c25589e hgyeom <rrune3@naver.com> 1691740542 +0900	pull origin develop: Fast-forward
+880e12e3f31a8ca26d8e1023ccca70436c25589e 880e12e3f31a8ca26d8e1023ccca70436c25589e hgyeom <rrune3@naver.com> 1691743464 +0900	checkout: moving from Feat/#38 to Fix/#41
+880e12e3f31a8ca26d8e1023ccca70436c25589e fe430b612c9a0c53c131ddf3f7461cc5de2a2328 hgyeom <rrune3@naver.com> 1691743484 +0900	commit: Fix/Detail, Comments, JjimType 수정 (#41)
+fe430b612c9a0c53c131ddf3f7461cc5de2a2328 e80cf12de48922b46bcd31463619db6324792dc8 hgyeom <rrune3@naver.com> 1691895428 +0900	commit: before pull
+e80cf12de48922b46bcd31463619db6324792dc8 51e4d1ac38aa3e190fbb80d2e2cd5419f059ff75 hgyeom <rrune3@naver.com> 1691899786 +0900	commit (merge): before pull
+51e4d1ac38aa3e190fbb80d2e2cd5419f059ff75 51e4d1ac38aa3e190fbb80d2e2cd5419f059ff75 hgyeom <rrune3@naver.com> 1691899788 +0900	checkout: moving from Fix/#41 to Design/#62
+51e4d1ac38aa3e190fbb80d2e2cd5419f059ff75 3d70ae2d475dc9e0cd2914448d3cd3676c0503b0 hgyeom <rrune3@naver.com> 1691899844 +0900	commit (merge): Design/댓글 CSS (#62)
+3d70ae2d475dc9e0cd2914448d3cd3676c0503b0 920568a2ae45ba2a680ac831a31089abe5c6c15d hgyeom <rrune3@naver.com> 1691903779 +0900	commit: before pull
+920568a2ae45ba2a680ac831a31089abe5c6c15d 117f868f1702ffdaf400f3ff49558b74c2d0a0ce hgyeom <rrune3@naver.com> 1691911143 +0900	commit (merge): before pull
+117f868f1702ffdaf400f3ff49558b74c2d0a0ce 54892dcde250c63aeeffb30cb4cf4d2960645fdf hgyeom <rrune3@naver.com> 1691911153 +0900	pull origin develop: Merge made by the 'ort' strategy.
+54892dcde250c63aeeffb30cb4cf4d2960645fdf 22bc76e5ca2de86fff63a4f04e7e5f39d21c2fd6 hgyeom <rrune3@naver.com> 1691970995 +0900	pull origin develop: Merge made by the 'ort' strategy.
+22bc76e5ca2de86fff63a4f04e7e5f39d21c2fd6 2783355e179da4f09d9b86c17d7daeee998be60e hgyeom <rrune3@naver.com> 1692000527 +0900	pull origin develop: Merge made by the 'ort' strategy.
+2783355e179da4f09d9b86c17d7daeee998be60e e7aa20b459d06af9bd3376d5b46e88672bac6245 hgyeom <rrune3@naver.com> 1692000579 +0900	checkout: moving from Design/#62 to main
+e7aa20b459d06af9bd3376d5b46e88672bac6245 e7aa20b459d06af9bd3376d5b46e88672bac6245 hgyeom <rrune3@naver.com> 1692000691 +0900	reset: moving to ORIG_HEAD
+e7aa20b459d06af9bd3376d5b46e88672bac6245 2783355e179da4f09d9b86c17d7daeee998be60e hgyeom <rrune3@naver.com> 1692000728 +0900	checkout: moving from main to Design/#62
+2783355e179da4f09d9b86c17d7daeee998be60e e7aa20b459d06af9bd3376d5b46e88672bac6245 hgyeom <rrune3@naver.com> 1692000859 +0900	checkout: moving from Design/#62 to main
